@@ -1,0 +1,1273 @@
+[ERROR] [15-07-2020 08:54:45:028.763 GMT] kvs_rtsp_url substr end
+[ERROR] [15-07-2020 08:54:45:028.799 GMT] video_stream_input substr first
+[ERROR] [15-07-2020 08:54:45:028.807 GMT] kvs_rtsp_url substr end
+[INFO ] [15-07-2020 08:54:45:029.989 GMT] createKinesisVideoClient(): Creating Kinesis Video Client
+[INFO ] [15-07-2020 08:54:45:030.007 GMT] heapInitialize(): Initializing native heap with limit size 134217728, spill ratio 0% and flags 0x00000001
+[INFO ] [15-07-2020 08:54:45:030.011 GMT] heapInitialize(): Creating AIV heap.
+[INFO ] [15-07-2020 08:54:45:030.021 GMT] heapInitialize(): Heap is initialized OK
+[DEBUG] [15-07-2020 08:54:45:030.029 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[DEBUG] [15-07-2020 08:54:45:030.036 GMT] getSecurityTokenHandler invoked
+[DEBUG] [15-07-2020 08:54:45:030.050 GMT] Refreshing credentials. Force refreshing: 0 Now time is: 1594803285030042247 Expiration: 0
+[INFO ] [15-07-2020 08:54:45:030.056 GMT] New credentials expiration is 1594806885
+[DEBUG] [15-07-2020 08:54:45:030.065 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000010
+[INFO ] [15-07-2020 08:54:45:030.070 GMT] createDeviceResultEvent(): Create device result event.
+[DEBUG] [15-07-2020 08:54:45:030.076 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 08:54:45:030.080 GMT] clientReadyHandler invoked
+[DEBUG] [15-07-2020 08:54:45:030.092 GMT] Client is ready
+[INFO ] [15-07-2020 08:54:45:030.124 GMT] Creating Kinesis Video Stream 
+[INFO ] [15-07-2020 08:54:45:030.138 GMT] createKinesisVideoStream(): Creating Kinesis Video Stream.
+[DEBUG] [15-07-2020 08:54:45:030.143 GMT] logStreamInfo(): Kinesis Video Stream Info
+[DEBUG] [15-07-2020 08:54:45:030.146 GMT] logStreamInfo(): 	Stream name:  
+[DEBUG] [15-07-2020 08:54:45:030.148 GMT] logStreamInfo(): 	Streaming type: STREAMING_TYPE_REALTIME 
+[DEBUG] [15-07-2020 08:54:45:030.151 GMT] logStreamInfo(): 	Content type: video/h264 
+[DEBUG] [15-07-2020 08:54:45:030.154 GMT] logStreamInfo(): 	Max latency (100ns): 600000000
+[DEBUG] [15-07-2020 08:54:45:030.156 GMT] logStreamInfo(): 	Fragment duration (100ns): 20000000
+[DEBUG] [15-07-2020 08:54:45:030.159 GMT] logStreamInfo(): 	Key frame fragmentation: Yes
+[DEBUG] [15-07-2020 08:54:45:030.161 GMT] logStreamInfo(): 	Use frame timecode: Yes
+[DEBUG] [15-07-2020 08:54:45:030.164 GMT] logStreamInfo(): 	Absolute frame timecode: Yes
+[DEBUG] [15-07-2020 08:54:45:030.167 GMT] logStreamInfo(): 	Nal adaptation flags: 0
+[DEBUG] [15-07-2020 08:54:45:030.169 GMT] logStreamInfo(): 	Average bandwith (bps): 4194304
+[DEBUG] [15-07-2020 08:54:45:030.172 GMT] logStreamInfo(): 	Framerate: 25
+[DEBUG] [15-07-2020 08:54:45:030.174 GMT] logStreamInfo(): 	Buffer duration (100ns): 1200000000
+[DEBUG] [15-07-2020 08:54:45:030.177 GMT] logStreamInfo(): 	Replay duration (100ns): 400000000
+[DEBUG] [15-07-2020 08:54:45:030.179 GMT] logStreamInfo(): 	Connection Staleness duration (100ns): 600000000
+[DEBUG] [15-07-2020 08:54:45:030.182 GMT] logStreamInfo(): 	Store Pressure Policy: 1
+[DEBUG] [15-07-2020 08:54:45:030.185 GMT] logStreamInfo(): 	View Overflow Policy: 1
+[DEBUG] [15-07-2020 08:54:45:030.187 GMT] logStreamInfo(): 	Segment UUID: NULL
+[DEBUG] [15-07-2020 08:54:45:030.190 GMT] logStreamInfo(): 	Frame ordering mode: 0
+[DEBUG] [15-07-2020 08:54:45:030.192 GMT] logStreamInfo(): Track list
+[DEBUG] [15-07-2020 08:54:45:030.195 GMT] logStreamInfo(): 	Track id: 1
+[DEBUG] [15-07-2020 08:54:45:030.198 GMT] logStreamInfo(): 	Track name: kinesis_video
+[DEBUG] [15-07-2020 08:54:45:030.200 GMT] logStreamInfo(): 	Codec id: V_MPEG4/ISO/AVC
+[DEBUG] [15-07-2020 08:54:45:030.203 GMT] logStreamInfo(): 	Track type: TRACK_INFO_TYPE_VIDEO
+[DEBUG] [15-07-2020 08:54:45:030.205 GMT] logStreamInfo(): 	Track cpd: NULL
+[DEBUG] [15-07-2020 08:54:45:030.230 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[INFO ] [15-07-2020 08:54:46:237.826 GMT] writeHeaderCallback(): RequestId: b1872904-4c89-45b8-89da-fcf7ae2256fd
+[WARN ] [15-07-2020 08:54:46:238.017 GMT] curlCompleteSync(): HTTP Error 404 : Response: {"Message":"The requested stream is not found or not active."}
+Request URL: https://kinesisvideo.us-east-1.amazonaws.com/describeStream
+Request Headers:
+    Authorization: AWS4-HMAC-SHA256 Credential=AKIAS5OMAKVYFTT6YY5K/20200715/us-east-1/kinesisvideo/aws4_request, SignedHeaders=host;user-agent;x-amz-date, Signature=d2ae8efc8c4e79321e5431cb32c86ad2e0d706755ad3c025dc92f1dda41b0a31
+    content-length: 37
+    content-type: application/json
+    host: kinesisvide
+[DEBUG] [15-07-2020 08:54:46:238.063 GMT] describeStreamCurlHandler(): DescribeStream API response: {"Message":"The requested stream is not found or not active."}
+[INFO ] [15-07-2020 08:54:46:239.902 GMT] describeStreamResultEvent(): Describe stream result event.
+[DEBUG] [15-07-2020 08:54:46:239.953 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000004
+[DEBUG] [15-07-2020 08:54:46:240.741 GMT] createStreamCurlHandler(): createStreamCurlHandler response 0x7f56dc006290
+[INFO ] [15-07-2020 08:54:47:360.325 GMT] writeHeaderCallback(): RequestId: a2b7514c-6bbe-4589-8561-124259c94e4e
+[DEBUG] [15-07-2020 08:54:47:360.450 GMT] createStreamCurlHandler(): CreateStream API response: {"StreamARN":"arn:aws:kinesisvideo:us-east-1:200680691056:stream/JY9757ACX1EVE7NM/1594803287204"}
+[INFO ] [15-07-2020 08:54:47:362.830 GMT] createStreamResultEvent(): Create stream result event.
+[DEBUG] [15-07-2020 08:54:47:362.891 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000004, Next state: 0x0000000000000020
+[INFO ] [15-07-2020 08:54:48:514.253 GMT] writeHeaderCallback(): RequestId: ca7ba583-ad6f-4875-9724-918e46d3df49
+[DEBUG] [15-07-2020 08:54:48:514.380 GMT] getStreamingEndpointCurlHandler(): GetStreamingEndpoint API response: {"DataEndpoint":"https://s-d022f287.kinesisvideo.us-east-1.amazonaws.com"}
+[INFO ] [15-07-2020 08:54:48:516.933 GMT] getStreamingEndpointResultEvent(): Get streaming endpoint result event.
+[DEBUG] [15-07-2020 08:54:48:516.997 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000020, Next state: 0x0000000000000010
+[DEBUG] [15-07-2020 08:54:48:517.034 GMT] getStreamingTokenHandler invoked
+[DEBUG] [15-07-2020 08:54:48:517.063 GMT] Refreshing credentials. Force refreshing: 1 Now time is: 1594803288517056479 Expiration: 1594806885
+[INFO ] [15-07-2020 08:54:48:517.080 GMT] New credentials expiration is 1594806888
+[INFO ] [15-07-2020 08:54:48:517.108 GMT] getStreamingTokenResultEvent(): Get streaming token result event.
+[DEBUG] [15-07-2020 08:54:48:517.132 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 08:54:48:517.159 GMT] streamReadyHandler invoked
+[DEBUG] [15-07-2020 08:54:48:517.442 GMT] Stream is ready: 
+[DEBUG] [15-07-2020 08:54:48:528.797 GMT] appsink configured
+[ERROR] [15-07-2020 09:02:03:180.806 GMT] kvs_rtsp_url substr end
+[ERROR] [15-07-2020 09:02:03:180.838 GMT] video_stream_input substr first
+[ERROR] [15-07-2020 09:02:03:180.849 GMT] kvs_rtsp_url substr end
+[INFO ] [15-07-2020 09:02:03:182.010 GMT] createKinesisVideoClient(): Creating Kinesis Video Client
+[INFO ] [15-07-2020 09:02:03:182.029 GMT] heapInitialize(): Initializing native heap with limit size 134217728, spill ratio 0% and flags 0x00000001
+[INFO ] [15-07-2020 09:02:03:182.033 GMT] heapInitialize(): Creating AIV heap.
+[INFO ] [15-07-2020 09:02:03:182.042 GMT] heapInitialize(): Heap is initialized OK
+[DEBUG] [15-07-2020 09:02:03:182.050 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[DEBUG] [15-07-2020 09:02:03:182.057 GMT] getSecurityTokenHandler invoked
+[DEBUG] [15-07-2020 09:02:03:182.071 GMT] Refreshing credentials. Force refreshing: 0 Now time is: 1594803723182063584 Expiration: 0
+[INFO ] [15-07-2020 09:02:03:182.077 GMT] New credentials expiration is 1594807323
+[DEBUG] [15-07-2020 09:02:03:182.087 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000010
+[INFO ] [15-07-2020 09:02:03:182.095 GMT] createDeviceResultEvent(): Create device result event.
+[DEBUG] [15-07-2020 09:02:03:182.102 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:02:03:182.106 GMT] clientReadyHandler invoked
+[DEBUG] [15-07-2020 09:02:03:182.119 GMT] Client is ready
+[INFO ] [15-07-2020 09:02:03:182.158 GMT] Creating Kinesis Video Stream 
+[INFO ] [15-07-2020 09:02:03:182.177 GMT] createKinesisVideoStream(): Creating Kinesis Video Stream.
+[DEBUG] [15-07-2020 09:02:03:182.185 GMT] logStreamInfo(): Kinesis Video Stream Info
+[DEBUG] [15-07-2020 09:02:03:182.190 GMT] logStreamInfo(): 	Stream name:  
+[DEBUG] [15-07-2020 09:02:03:182.195 GMT] logStreamInfo(): 	Streaming type: STREAMING_TYPE_REALTIME 
+[DEBUG] [15-07-2020 09:02:03:182.199 GMT] logStreamInfo(): 	Content type: video/h264 
+[DEBUG] [15-07-2020 09:02:03:182.204 GMT] logStreamInfo(): 	Max latency (100ns): 600000000
+[DEBUG] [15-07-2020 09:02:03:182.208 GMT] logStreamInfo(): 	Fragment duration (100ns): 20000000
+[DEBUG] [15-07-2020 09:02:03:182.211 GMT] logStreamInfo(): 	Key frame fragmentation: Yes
+[DEBUG] [15-07-2020 09:02:03:182.213 GMT] logStreamInfo(): 	Use frame timecode: Yes
+[DEBUG] [15-07-2020 09:02:03:182.216 GMT] logStreamInfo(): 	Absolute frame timecode: Yes
+[DEBUG] [15-07-2020 09:02:03:182.218 GMT] logStreamInfo(): 	Nal adaptation flags: 0
+[DEBUG] [15-07-2020 09:02:03:182.221 GMT] logStreamInfo(): 	Average bandwith (bps): 4194304
+[DEBUG] [15-07-2020 09:02:03:182.223 GMT] logStreamInfo(): 	Framerate: 25
+[DEBUG] [15-07-2020 09:02:03:182.226 GMT] logStreamInfo(): 	Buffer duration (100ns): 1200000000
+[DEBUG] [15-07-2020 09:02:03:182.228 GMT] logStreamInfo(): 	Replay duration (100ns): 400000000
+[DEBUG] [15-07-2020 09:02:03:182.230 GMT] logStreamInfo(): 	Connection Staleness duration (100ns): 600000000
+[DEBUG] [15-07-2020 09:02:03:182.233 GMT] logStreamInfo(): 	Store Pressure Policy: 1
+[DEBUG] [15-07-2020 09:02:03:182.235 GMT] logStreamInfo(): 	View Overflow Policy: 1
+[DEBUG] [15-07-2020 09:02:03:182.238 GMT] logStreamInfo(): 	Segment UUID: NULL
+[DEBUG] [15-07-2020 09:02:03:182.240 GMT] logStreamInfo(): 	Frame ordering mode: 0
+[DEBUG] [15-07-2020 09:02:03:182.243 GMT] logStreamInfo(): Track list
+[DEBUG] [15-07-2020 09:02:03:182.245 GMT] logStreamInfo(): 	Track id: 1
+[DEBUG] [15-07-2020 09:02:03:182.248 GMT] logStreamInfo(): 	Track name: kinesis_video
+[DEBUG] [15-07-2020 09:02:03:182.250 GMT] logStreamInfo(): 	Codec id: V_MPEG4/ISO/AVC
+[DEBUG] [15-07-2020 09:02:03:182.253 GMT] logStreamInfo(): 	Track type: TRACK_INFO_TYPE_VIDEO
+[DEBUG] [15-07-2020 09:02:03:182.255 GMT] logStreamInfo(): 	Track cpd: NULL
+[DEBUG] [15-07-2020 09:02:03:182.280 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[INFO ] [15-07-2020 09:02:04:410.200 GMT] writeHeaderCallback(): RequestId: b2a1dad2-ee5a-49c3-880f-e214415285e6
+[DEBUG] [15-07-2020 09:02:04:410.347 GMT] describeStreamCurlHandler(): DescribeStream API response: {"StreamInfo":{"CreationTime":1.594803287204E9,"DataRetentionInHours":2,"DeviceName":"Kinesis_Video_Device","IngestionConfiguration":null,"KmsKeyId":"arn:aws:kms:us-east-1:200680691056:alias/aws/kinesisvideo","MediaType":"video/h264","Status":"ACTIVE","StreamARN":"arn:aws:kinesisvideo:us-east-1:200680691056:stream/JY9757ACX1EVE7NM/1594803287204","StreamName":"JY9757ACX1EVE7NM","Version":"ogmlQGV4Ra0Pu0HuWM1n"}}
+[INFO ] [15-07-2020 09:02:04:412.296 GMT] describeStreamResultEvent(): Describe stream result event.
+[DEBUG] [15-07-2020 09:02:04:412.354 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000020
+[INFO ] [15-07-2020 09:02:05:516.849 GMT] writeHeaderCallback(): RequestId: 1cba59e2-83c4-493b-b7b4-82ee93513000
+[DEBUG] [15-07-2020 09:02:05:516.971 GMT] getStreamingEndpointCurlHandler(): GetStreamingEndpoint API response: {"DataEndpoint":"https://s-d022f287.kinesisvideo.us-east-1.amazonaws.com"}
+[INFO ] [15-07-2020 09:02:05:519.397 GMT] getStreamingEndpointResultEvent(): Get streaming endpoint result event.
+[DEBUG] [15-07-2020 09:02:05:519.460 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000020, Next state: 0x0000000000000010
+[DEBUG] [15-07-2020 09:02:05:519.494 GMT] getStreamingTokenHandler invoked
+[DEBUG] [15-07-2020 09:02:05:519.521 GMT] Refreshing credentials. Force refreshing: 1 Now time is: 1594803725519514660 Expiration: 1594807323
+[INFO ] [15-07-2020 09:02:05:519.558 GMT] New credentials expiration is 1594807325
+[INFO ] [15-07-2020 09:02:05:519.586 GMT] getStreamingTokenResultEvent(): Get streaming token result event.
+[DEBUG] [15-07-2020 09:02:05:519.610 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:02:05:519.637 GMT] streamReadyHandler invoked
+[DEBUG] [15-07-2020 09:02:05:519.940 GMT] Stream is ready: 
+[DEBUG] [15-07-2020 09:02:05:526.747 GMT] appsink configured
+[ERROR] [15-07-2020 09:04:22:186.284 GMT] kvs_rtsp_url substr end
+[ERROR] [15-07-2020 09:04:22:186.386 GMT] video_stream_input substr first
+[ERROR] [15-07-2020 09:04:22:186.402 GMT] kvs_rtsp_url substr end
+[INFO ] [15-07-2020 09:04:22:188.644 GMT] createKinesisVideoClient(): Creating Kinesis Video Client
+[INFO ] [15-07-2020 09:04:22:188.685 GMT] heapInitialize(): Initializing native heap with limit size 134217728, spill ratio 0% and flags 0x00000001
+[INFO ] [15-07-2020 09:04:22:188.694 GMT] heapInitialize(): Creating AIV heap.
+[INFO ] [15-07-2020 09:04:22:188.714 GMT] heapInitialize(): Heap is initialized OK
+[DEBUG] [15-07-2020 09:04:22:188.732 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[DEBUG] [15-07-2020 09:04:22:188.746 GMT] getSecurityTokenHandler invoked
+[DEBUG] [15-07-2020 09:04:22:188.781 GMT] Refreshing credentials. Force refreshing: 0 Now time is: 1594803862188761488 Expiration: 0
+[INFO ] [15-07-2020 09:04:22:188.794 GMT] New credentials expiration is 1594807462
+[DEBUG] [15-07-2020 09:04:22:188.816 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000010
+[INFO ] [15-07-2020 09:04:22:188.825 GMT] createDeviceResultEvent(): Create device result event.
+[DEBUG] [15-07-2020 09:04:22:188.838 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:04:22:188.847 GMT] clientReadyHandler invoked
+[DEBUG] [15-07-2020 09:04:22:188.873 GMT] Client is ready
+[INFO ] [15-07-2020 09:04:22:188.941 GMT] Creating Kinesis Video Stream 
+[INFO ] [15-07-2020 09:04:22:188.972 GMT] createKinesisVideoStream(): Creating Kinesis Video Stream.
+[DEBUG] [15-07-2020 09:04:22:188.981 GMT] logStreamInfo(): Kinesis Video Stream Info
+[DEBUG] [15-07-2020 09:04:22:188.988 GMT] logStreamInfo(): 	Stream name:  
+[DEBUG] [15-07-2020 09:04:22:188.994 GMT] logStreamInfo(): 	Streaming type: STREAMING_TYPE_REALTIME 
+[DEBUG] [15-07-2020 09:04:22:189.000 GMT] logStreamInfo(): 	Content type: video/h264 
+[DEBUG] [15-07-2020 09:04:22:189.006 GMT] logStreamInfo(): 	Max latency (100ns): 600000000
+[DEBUG] [15-07-2020 09:04:22:189.012 GMT] logStreamInfo(): 	Fragment duration (100ns): 20000000
+[DEBUG] [15-07-2020 09:04:22:189.018 GMT] logStreamInfo(): 	Key frame fragmentation: Yes
+[DEBUG] [15-07-2020 09:04:22:189.023 GMT] logStreamInfo(): 	Use frame timecode: Yes
+[DEBUG] [15-07-2020 09:04:22:189.029 GMT] logStreamInfo(): 	Absolute frame timecode: Yes
+[DEBUG] [15-07-2020 09:04:22:189.035 GMT] logStreamInfo(): 	Nal adaptation flags: 0
+[DEBUG] [15-07-2020 09:04:22:189.041 GMT] logStreamInfo(): 	Average bandwith (bps): 4194304
+[DEBUG] [15-07-2020 09:04:22:189.046 GMT] logStreamInfo(): 	Framerate: 25
+[DEBUG] [15-07-2020 09:04:22:189.052 GMT] logStreamInfo(): 	Buffer duration (100ns): 1200000000
+[DEBUG] [15-07-2020 09:04:22:189.058 GMT] logStreamInfo(): 	Replay duration (100ns): 400000000
+[DEBUG] [15-07-2020 09:04:22:189.064 GMT] logStreamInfo(): 	Connection Staleness duration (100ns): 600000000
+[DEBUG] [15-07-2020 09:04:22:189.070 GMT] logStreamInfo(): 	Store Pressure Policy: 1
+[DEBUG] [15-07-2020 09:04:22:189.084 GMT] logStreamInfo(): 	View Overflow Policy: 1
+[DEBUG] [15-07-2020 09:04:22:189.090 GMT] logStreamInfo(): 	Segment UUID: NULL
+[DEBUG] [15-07-2020 09:04:22:189.096 GMT] logStreamInfo(): 	Frame ordering mode: 0
+[DEBUG] [15-07-2020 09:04:22:189.101 GMT] logStreamInfo(): Track list
+[DEBUG] [15-07-2020 09:04:22:189.107 GMT] logStreamInfo(): 	Track id: 1
+[DEBUG] [15-07-2020 09:04:22:189.112 GMT] logStreamInfo(): 	Track name: kinesis_video
+[DEBUG] [15-07-2020 09:04:22:189.117 GMT] logStreamInfo(): 	Codec id: V_MPEG4/ISO/AVC
+[DEBUG] [15-07-2020 09:04:22:189.123 GMT] logStreamInfo(): 	Track type: TRACK_INFO_TYPE_VIDEO
+[DEBUG] [15-07-2020 09:04:22:189.128 GMT] logStreamInfo(): 	Track cpd: NULL
+[DEBUG] [15-07-2020 09:04:22:189.181 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[INFO ] [15-07-2020 09:04:23:199.351 GMT] writeHeaderCallback(): RequestId: a110f7bf-af6e-4355-8566-90b277f9bca3
+[DEBUG] [15-07-2020 09:04:23:199.506 GMT] describeStreamCurlHandler(): DescribeStream API response: {"StreamInfo":{"CreationTime":1.594803287204E9,"DataRetentionInHours":2,"DeviceName":"Kinesis_Video_Device","IngestionConfiguration":null,"KmsKeyId":"arn:aws:kms:us-east-1:200680691056:alias/aws/kinesisvideo","MediaType":"video/h264","Status":"ACTIVE","StreamARN":"arn:aws:kinesisvideo:us-east-1:200680691056:stream/JY9757ACX1EVE7NM/1594803287204","StreamName":"JY9757ACX1EVE7NM","Version":"ogmlQGV4Ra0Pu0HuWM1n"}}
+[INFO ] [15-07-2020 09:04:23:202.077 GMT] describeStreamResultEvent(): Describe stream result event.
+[DEBUG] [15-07-2020 09:04:23:202.161 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000020
+[INFO ] [15-07-2020 09:04:24:228.423 GMT] writeHeaderCallback(): RequestId: e2d570d6-b3c8-4aba-b56d-46dcebc5c985
+[DEBUG] [15-07-2020 09:04:24:228.548 GMT] getStreamingEndpointCurlHandler(): GetStreamingEndpoint API response: {"DataEndpoint":"https://s-d022f287.kinesisvideo.us-east-1.amazonaws.com"}
+[INFO ] [15-07-2020 09:04:24:230.991 GMT] getStreamingEndpointResultEvent(): Get streaming endpoint result event.
+[DEBUG] [15-07-2020 09:04:24:231.049 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000020, Next state: 0x0000000000000010
+[DEBUG] [15-07-2020 09:04:24:231.084 GMT] getStreamingTokenHandler invoked
+[DEBUG] [15-07-2020 09:04:24:231.112 GMT] Refreshing credentials. Force refreshing: 1 Now time is: 1594803864231105378 Expiration: 1594807462
+[INFO ] [15-07-2020 09:04:24:231.146 GMT] New credentials expiration is 1594807464
+[INFO ] [15-07-2020 09:04:24:231.173 GMT] getStreamingTokenResultEvent(): Get streaming token result event.
+[DEBUG] [15-07-2020 09:04:24:231.196 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:04:24:231.223 GMT] streamReadyHandler invoked
+[DEBUG] [15-07-2020 09:04:24:231.474 GMT] Stream is ready: 
+[DEBUG] [15-07-2020 09:04:24:237.707 GMT] appsink configured
+[ERROR] [15-07-2020 09:18:03:899.239 GMT] kvs_rtsp_url substr end
+[ERROR] [15-07-2020 09:18:03:899.329 GMT] video_stream_input substr first
+[ERROR] [15-07-2020 09:18:03:899.361 GMT] kvs_rtsp_url substr end
+[INFO ] [15-07-2020 09:18:03:901.652 GMT] createKinesisVideoClient(): Creating Kinesis Video Client
+[INFO ] [15-07-2020 09:18:03:901.695 GMT] heapInitialize(): Initializing native heap with limit size 134217728, spill ratio 0% and flags 0x00000001
+[INFO ] [15-07-2020 09:18:03:901.703 GMT] heapInitialize(): Creating AIV heap.
+[INFO ] [15-07-2020 09:18:03:901.724 GMT] heapInitialize(): Heap is initialized OK
+[DEBUG] [15-07-2020 09:18:03:901.743 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[DEBUG] [15-07-2020 09:18:03:901.757 GMT] getSecurityTokenHandler invoked
+[DEBUG] [15-07-2020 09:18:03:901.790 GMT] Refreshing credentials. Force refreshing: 0 Now time is: 1594804683901771353 Expiration: 0
+[INFO ] [15-07-2020 09:18:03:901.802 GMT] New credentials expiration is 1594808283
+[DEBUG] [15-07-2020 09:18:03:901.832 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000010
+[INFO ] [15-07-2020 09:18:03:901.841 GMT] createDeviceResultEvent(): Create device result event.
+[DEBUG] [15-07-2020 09:18:03:901.853 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:18:03:901.862 GMT] clientReadyHandler invoked
+[DEBUG] [15-07-2020 09:18:03:901.888 GMT] Client is ready
+[INFO ] [15-07-2020 09:18:03:901.956 GMT] Creating Kinesis Video Stream 
+[INFO ] [15-07-2020 09:18:03:901.985 GMT] createKinesisVideoStream(): Creating Kinesis Video Stream.
+[DEBUG] [15-07-2020 09:18:03:901.994 GMT] logStreamInfo(): Kinesis Video Stream Info
+[DEBUG] [15-07-2020 09:18:03:902.000 GMT] logStreamInfo(): 	Stream name:  
+[DEBUG] [15-07-2020 09:18:03:902.006 GMT] logStreamInfo(): 	Streaming type: STREAMING_TYPE_REALTIME 
+[DEBUG] [15-07-2020 09:18:03:902.012 GMT] logStreamInfo(): 	Content type: video/h264 
+[DEBUG] [15-07-2020 09:18:03:902.017 GMT] logStreamInfo(): 	Max latency (100ns): 600000000
+[DEBUG] [15-07-2020 09:18:03:902.023 GMT] logStreamInfo(): 	Fragment duration (100ns): 20000000
+[DEBUG] [15-07-2020 09:18:03:902.028 GMT] logStreamInfo(): 	Key frame fragmentation: Yes
+[DEBUG] [15-07-2020 09:18:03:902.034 GMT] logStreamInfo(): 	Use frame timecode: Yes
+[DEBUG] [15-07-2020 09:18:03:902.039 GMT] logStreamInfo(): 	Absolute frame timecode: Yes
+[DEBUG] [15-07-2020 09:18:03:902.044 GMT] logStreamInfo(): 	Nal adaptation flags: 0
+[DEBUG] [15-07-2020 09:18:03:902.050 GMT] logStreamInfo(): 	Average bandwith (bps): 4194304
+[DEBUG] [15-07-2020 09:18:03:902.055 GMT] logStreamInfo(): 	Framerate: 25
+[DEBUG] [15-07-2020 09:18:03:902.061 GMT] logStreamInfo(): 	Buffer duration (100ns): 1200000000
+[DEBUG] [15-07-2020 09:18:03:902.066 GMT] logStreamInfo(): 	Replay duration (100ns): 400000000
+[DEBUG] [15-07-2020 09:18:03:902.072 GMT] logStreamInfo(): 	Connection Staleness duration (100ns): 600000000
+[DEBUG] [15-07-2020 09:18:03:902.077 GMT] logStreamInfo(): 	Store Pressure Policy: 1
+[DEBUG] [15-07-2020 09:18:03:902.082 GMT] logStreamInfo(): 	View Overflow Policy: 1
+[DEBUG] [15-07-2020 09:18:03:902.088 GMT] logStreamInfo(): 	Segment UUID: NULL
+[DEBUG] [15-07-2020 09:18:03:902.093 GMT] logStreamInfo(): 	Frame ordering mode: 0
+[DEBUG] [15-07-2020 09:18:03:902.099 GMT] logStreamInfo(): Track list
+[DEBUG] [15-07-2020 09:18:03:902.104 GMT] logStreamInfo(): 	Track id: 1
+[DEBUG] [15-07-2020 09:18:03:902.110 GMT] logStreamInfo(): 	Track name: kinesis_video
+[DEBUG] [15-07-2020 09:18:03:902.115 GMT] logStreamInfo(): 	Codec id: V_MPEG4/ISO/AVC
+[DEBUG] [15-07-2020 09:18:03:902.121 GMT] logStreamInfo(): 	Track type: TRACK_INFO_TYPE_VIDEO
+[DEBUG] [15-07-2020 09:18:03:902.126 GMT] logStreamInfo(): 	Track cpd: NULL
+[DEBUG] [15-07-2020 09:18:03:902.178 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[INFO ] [15-07-2020 09:18:05:098.932 GMT] writeHeaderCallback(): RequestId: 66e94737-e14e-4d3b-aeb1-4171bda5b20e
+[DEBUG] [15-07-2020 09:18:05:099.077 GMT] describeStreamCurlHandler(): DescribeStream API response: {"StreamInfo":{"CreationTime":1.594803287204E9,"DataRetentionInHours":2,"DeviceName":"Kinesis_Video_Device","IngestionConfiguration":null,"KmsKeyId":"arn:aws:kms:us-east-1:200680691056:alias/aws/kinesisvideo","MediaType":"video/h264","Status":"ACTIVE","StreamARN":"arn:aws:kinesisvideo:us-east-1:200680691056:stream/JY9757ACX1EVE7NM/1594803287204","StreamName":"JY9757ACX1EVE7NM","Version":"ogmlQGV4Ra0Pu0HuWM1n"}}
+[INFO ] [15-07-2020 09:18:05:101.058 GMT] describeStreamResultEvent(): Describe stream result event.
+[DEBUG] [15-07-2020 09:18:05:101.117 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000020
+[INFO ] [15-07-2020 09:18:06:204.932 GMT] writeHeaderCallback(): RequestId: 5ca2cccc-bab2-459e-b301-c9b5e7388ebd
+[DEBUG] [15-07-2020 09:18:06:205.063 GMT] getStreamingEndpointCurlHandler(): GetStreamingEndpoint API response: {"DataEndpoint":"https://s-d022f287.kinesisvideo.us-east-1.amazonaws.com"}
+[INFO ] [15-07-2020 09:18:06:207.557 GMT] getStreamingEndpointResultEvent(): Get streaming endpoint result event.
+[DEBUG] [15-07-2020 09:18:06:207.622 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000020, Next state: 0x0000000000000010
+[DEBUG] [15-07-2020 09:18:06:207.656 GMT] getStreamingTokenHandler invoked
+[DEBUG] [15-07-2020 09:18:06:207.683 GMT] Refreshing credentials. Force refreshing: 1 Now time is: 1594804686207677104 Expiration: 1594808283
+[INFO ] [15-07-2020 09:18:06:207.719 GMT] New credentials expiration is 1594808286
+[INFO ] [15-07-2020 09:18:06:207.747 GMT] getStreamingTokenResultEvent(): Get streaming token result event.
+[DEBUG] [15-07-2020 09:18:06:207.771 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:18:06:207.798 GMT] streamReadyHandler invoked
+[DEBUG] [15-07-2020 09:18:06:208.053 GMT] Stream is ready: 
+[DEBUG] [15-07-2020 09:18:06:214.566 GMT] appsink configured
+[ERROR] [15-07-2020 09:23:05:621.174 GMT] video_stream_input substr first
+[ERROR] [15-07-2020 09:23:05:621.205 GMT] kvs_rtsp_url substr end
+[INFO ] [15-07-2020 09:23:05:622.371 GMT] createKinesisVideoClient(): Creating Kinesis Video Client
+[INFO ] [15-07-2020 09:23:05:622.390 GMT] heapInitialize(): Initializing native heap with limit size 134217728, spill ratio 0% and flags 0x00000001
+[INFO ] [15-07-2020 09:23:05:622.395 GMT] heapInitialize(): Creating AIV heap.
+[INFO ] [15-07-2020 09:23:05:622.405 GMT] heapInitialize(): Heap is initialized OK
+[DEBUG] [15-07-2020 09:23:05:622.413 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[DEBUG] [15-07-2020 09:23:05:622.420 GMT] getSecurityTokenHandler invoked
+[DEBUG] [15-07-2020 09:23:05:622.436 GMT] Refreshing credentials. Force refreshing: 0 Now time is: 1594804985622426608 Expiration: 0
+[INFO ] [15-07-2020 09:23:05:622.443 GMT] New credentials expiration is 1594808585
+[DEBUG] [15-07-2020 09:23:05:622.453 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000010
+[INFO ] [15-07-2020 09:23:05:622.458 GMT] createDeviceResultEvent(): Create device result event.
+[DEBUG] [15-07-2020 09:23:05:622.464 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:23:05:622.468 GMT] clientReadyHandler invoked
+[DEBUG] [15-07-2020 09:23:05:622.481 GMT] Client is ready
+[INFO ] [15-07-2020 09:23:05:622.515 GMT] Creating Kinesis Video Stream FCA_Video_Company_1_Camera_1
+[INFO ] [15-07-2020 09:23:05:622.530 GMT] createKinesisVideoStream(): Creating Kinesis Video Stream.
+[DEBUG] [15-07-2020 09:23:05:622.535 GMT] logStreamInfo(): Kinesis Video Stream Info
+[DEBUG] [15-07-2020 09:23:05:622.538 GMT] logStreamInfo(): 	Stream name: FCA_Video_Company_1_Camera_1 
+[DEBUG] [15-07-2020 09:23:05:622.541 GMT] logStreamInfo(): 	Streaming type: STREAMING_TYPE_REALTIME 
+[DEBUG] [15-07-2020 09:23:05:622.544 GMT] logStreamInfo(): 	Content type: video/h264 
+[DEBUG] [15-07-2020 09:23:05:622.547 GMT] logStreamInfo(): 	Max latency (100ns): 600000000
+[DEBUG] [15-07-2020 09:23:05:622.550 GMT] logStreamInfo(): 	Fragment duration (100ns): 20000000
+[DEBUG] [15-07-2020 09:23:05:622.552 GMT] logStreamInfo(): 	Key frame fragmentation: Yes
+[DEBUG] [15-07-2020 09:23:05:622.555 GMT] logStreamInfo(): 	Use frame timecode: Yes
+[DEBUG] [15-07-2020 09:23:05:622.558 GMT] logStreamInfo(): 	Absolute frame timecode: Yes
+[DEBUG] [15-07-2020 09:23:05:622.561 GMT] logStreamInfo(): 	Nal adaptation flags: 0
+[DEBUG] [15-07-2020 09:23:05:622.564 GMT] logStreamInfo(): 	Average bandwith (bps): 4194304
+[DEBUG] [15-07-2020 09:23:05:622.567 GMT] logStreamInfo(): 	Framerate: 25
+[DEBUG] [15-07-2020 09:23:05:622.570 GMT] logStreamInfo(): 	Buffer duration (100ns): 1200000000
+[DEBUG] [15-07-2020 09:23:05:622.572 GMT] logStreamInfo(): 	Replay duration (100ns): 400000000
+[DEBUG] [15-07-2020 09:23:05:622.581 GMT] logStreamInfo(): 	Connection Staleness duration (100ns): 600000000
+[DEBUG] [15-07-2020 09:23:05:622.584 GMT] logStreamInfo(): 	Store Pressure Policy: 1
+[DEBUG] [15-07-2020 09:23:05:622.586 GMT] logStreamInfo(): 	View Overflow Policy: 1
+[DEBUG] [15-07-2020 09:23:05:622.589 GMT] logStreamInfo(): 	Segment UUID: NULL
+[DEBUG] [15-07-2020 09:23:05:622.592 GMT] logStreamInfo(): 	Frame ordering mode: 0
+[DEBUG] [15-07-2020 09:23:05:622.594 GMT] logStreamInfo(): Track list
+[DEBUG] [15-07-2020 09:23:05:622.597 GMT] logStreamInfo(): 	Track id: 1
+[DEBUG] [15-07-2020 09:23:05:622.600 GMT] logStreamInfo(): 	Track name: kinesis_video
+[DEBUG] [15-07-2020 09:23:05:622.603 GMT] logStreamInfo(): 	Codec id: V_MPEG4/ISO/AVC
+[DEBUG] [15-07-2020 09:23:05:622.605 GMT] logStreamInfo(): 	Track type: TRACK_INFO_TYPE_VIDEO
+[DEBUG] [15-07-2020 09:23:05:622.608 GMT] logStreamInfo(): 	Track cpd: NULL
+[DEBUG] [15-07-2020 09:23:05:622.634 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000001, Next state: 0x0000000000000002
+[INFO ] [15-07-2020 09:23:06:823.205 GMT] writeHeaderCallback(): RequestId: b2f8f69e-bbf0-45ba-b596-03edfa686782
+[DEBUG] [15-07-2020 09:23:06:823.352 GMT] describeStreamCurlHandler(): DescribeStream API response: {"StreamInfo":{"CreationTime":1.594284227381E9,"DataRetentionInHours":2,"DeviceName":"hifocus","IngestionConfiguration":null,"KmsKeyId":"arn:aws:kms:us-east-1:200680691056:alias/aws/kinesisvideo","MediaType":null,"Status":"ACTIVE","StreamARN":"arn:aws:kinesisvideo:us-east-1:200680691056:stream/FCA_Video_Company_1_Camera_1/1594284227381","StreamName":"FCA_Video_Company_1_Camera_1","Version":"aGdUSgBa1kDtTBlPu2dQ"}}
+[INFO ] [15-07-2020 09:23:06:825.300 GMT] describeStreamResultEvent(): Describe stream result event.
+[WARN ] [15-07-2020 09:23:06:825.384 GMT] describeStreamResult(): Content type returned from the DescribeStream call doesn't match the one specified in the StreamInfo
+[DEBUG] [15-07-2020 09:23:06:825.409 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000002, Next state: 0x0000000000000020
+[INFO ] [15-07-2020 09:23:07:933.139 GMT] writeHeaderCallback(): RequestId: c5628ec3-4b4a-41af-8e56-2ceced2a1ef4
+[DEBUG] [15-07-2020 09:23:07:933.266 GMT] getStreamingEndpointCurlHandler(): GetStreamingEndpoint API response: {"DataEndpoint":"https://s-468461da.kinesisvideo.us-east-1.amazonaws.com"}
+[INFO ] [15-07-2020 09:23:07:935.629 GMT] getStreamingEndpointResultEvent(): Get streaming endpoint result event.
+[DEBUG] [15-07-2020 09:23:07:935.688 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000020, Next state: 0x0000000000000010
+[DEBUG] [15-07-2020 09:23:07:935.739 GMT] getStreamingTokenHandler invoked
+[DEBUG] [15-07-2020 09:23:07:935.767 GMT] Refreshing credentials. Force refreshing: 1 Now time is: 1594804987935760444 Expiration: 1594808585
+[INFO ] [15-07-2020 09:23:07:935.784 GMT] New credentials expiration is 1594808587
+[INFO ] [15-07-2020 09:23:07:935.812 GMT] getStreamingTokenResultEvent(): Get streaming token result event.
+[DEBUG] [15-07-2020 09:23:07:935.835 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000010, Next state: 0x0000000000000040
+[DEBUG] [15-07-2020 09:23:07:935.862 GMT] streamReadyHandler invoked
+[DEBUG] [15-07-2020 09:23:07:936.114 GMT] Stream is ready: FCA_Video_Company_1_Camera_1
+[DEBUG] [15-07-2020 09:23:07:942.794 GMT] appsink configured
+[DEBUG] [15-07-2020 09:23:07:942.961 GMT] Pipeline playing
+[INFO ] [15-07-2020 09:23:08:516.349 GMT] kinesisVideoStreamFormatChanged(): Stream format changed.
+[DEBUG] [15-07-2020 09:23:08:516.792 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000040, Next state: 0x0000000000000080
+[INFO ] [15-07-2020 09:23:08:516.987 GMT] putStreamResultEvent(): Put stream result event. New upload handle 0
+[DEBUG] [15-07-2020 09:23:08:527.216 GMT] stepStateMachine(): State Machine - Current state: 0x0000000000000080, Next state: 0x0000000000000100
+[DEBUG] [15-07-2020 09:23:08:527.765 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 133995930
+	>> Allocated storage byte size: 221798
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 25
+	>> Total streams transfer rate (bps): 33554432 (32768 Kbps)
+	>> Current view duration (ms): 0
+	>> Overall view duration (ms): 0
+	>> Current view byte size: 221750
+	>> Overall view byte size: 221750
+	>> Current frame rate (fps): 25
+	>> Current transfer rate (bps): 33554432 (32768 Kbps)
+[INFO ] [15-07-2020 09:23:09:752.267 GMT] writeHeaderCallback(): RequestId: dbfd4c69-6fcb-06f2-8c75-8154a2e3cefa
+[DEBUG] [15-07-2020 09:23:09:752.486 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:022.850 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:292.441 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:302.434 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594804988516,"FragmentNumber":"91343852333181501717324262611306808941444509106"}
+
+[DEBUG] [15-07-2020 09:23:10:302.560 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:10:561.505 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:562.113 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:562.792 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:830.797 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:10:831.799 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:10:832.309 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:10:832.341 GMT] postReadCallback(): Wrote 51992 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:10:833.858 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:10:833.932 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:11:445.604 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:11:445.711 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:11:445.720 GMT] postReadCallback(): Wrote 3970 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:11:445.736 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:11:445.742 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:12:446.891 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:12:447.199 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:12:447.227 GMT] postReadCallback(): Wrote 24789 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:12:447.327 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:12:447.348 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:13:448.654 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:13:448.980 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:13:449.009 GMT] postReadCallback(): Wrote 17055 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:13:449.095 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:13:449.115 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:14:529.697 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:14:529.992 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:14:530.019 GMT] postReadCallback(): Wrote 18001 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:14:530.108 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:14:530.128 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:15:531.292 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:15:531.731 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:15:531.771 GMT] postReadCallback(): Wrote 15498 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:15:531.901 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:15:531.932 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:16:533.219 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:16:533.588 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:16:533.620 GMT] postReadCallback(): Wrote 29864 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:16:533.729 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:16:533.750 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:17:534.962 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:17:535.445 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:17:535.519 GMT] postReadCallback(): Wrote 29565 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:17:535.682 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:17:535.713 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:18:522.475 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132714156
+	>> Allocated storage byte size: 1503572
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 18782792 (18342 Kbps)
+	>> Current view duration (ms): 939
+	>> Overall view duration (ms): 9983
+	>> Current view byte size: 320596
+	>> Overall view byte size: 1493924
+	>> Current frame rate (fps): 21.7283
+	>> Current transfer rate (bps): 18782792 (18342 Kbps)
+[DEBUG] [15-07-2020 09:23:18:536.836 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:18:537.144 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:18:537.396 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:18:537.611 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:18:537.811 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:18:537.849 GMT] postReadCallback(): Wrote 58500 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:18:538.009 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:18:538.030 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:19:346.651 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594804988516,"FragmentNumber":"91343852333181501717324262611306808941444509106"}
+
+[DEBUG] [15-07-2020 09:23:19:346.775 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:19:346.985 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:19:347.396 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:19:347.424 GMT] postReadCallback(): Wrote 59760 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:19:347.735 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:19:347.758 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:19:352.060 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594804998499,"FragmentNumber":"91343852333181501722276022768448332471777517786"}
+
+[DEBUG] [15-07-2020 09:23:19:352.280 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:19:552.529 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594804988516,"FragmentNumber":"91343852333181501717324262611306808941444509106"}
+
+[DEBUG] [15-07-2020 09:23:19:552.759 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:19:552.817 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:19:552.838 GMT] postReadCallback(): Wrote 26094 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:19:552.968 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:19:552.990 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:20:553.489 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:20:553.812 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:20:553.841 GMT] postReadCallback(): Wrote 44849 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:20:553.982 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:20:554.003 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:21:555.320 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:21:555.637 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:21:556.050 GMT] postReadCallback(): Wrote 17533 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:21:556.198 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:21:556.224 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:22:557.420 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:22:557.752 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:22:557.781 GMT] postReadCallback(): Wrote 50163 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:22:557.944 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:22:557.982 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:23:559.284 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:23:559.608 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:23:559.636 GMT] postReadCallback(): Wrote 42085 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:23:559.768 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:23:559.808 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:24:561.103 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:24:561.463 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:24:561.496 GMT] postReadCallback(): Wrote 52487 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:24:561.654 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:24:561.675 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:25:562.972 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:25:563.288 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:25:563.315 GMT] postReadCallback(): Wrote 28961 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:25:563.418 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:25:563.439 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:26:564.041 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:26:564.371 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:26:564.699 GMT] postReadCallback(): Wrote 31981 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:26:564.894 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:26:564.921 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:27:566.192 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:27:566.289 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:27:566.344 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:27:566.391 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:27:566.396 GMT] postReadCallback(): Wrote 17405 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:27:566.416 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:27:566.420 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:28:519.345 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132463934
+	>> Allocated storage byte size: 1753794
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 11184904 (10922 Kbps)
+	>> Current view duration (ms): 897
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 409239
+	>> Overall view byte size: 1744146
+	>> Current frame rate (fps): 21.742
+	>> Current transfer rate (bps): 11184904 (10922 Kbps)
+[DEBUG] [15-07-2020 09:23:28:567.568 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:28:567.786 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:28:567.921 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:28:568.060 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:28:568.197 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:28:568.328 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:28:568.477 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:28:568.495 GMT] postReadCallback(): Wrote 39571 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:28:837.867 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:28:837.941 GMT] postReadCallback(): Wrote 47105 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:28:840.216 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:28:840.266 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:29:185.004 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594804998499,"FragmentNumber":"91343852333181501722276022768448332471777517786"}
+
+[DEBUG] [15-07-2020 09:23:29:185.199 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:29:185.285 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:29:185.306 GMT] postReadCallback(): Wrote 58151 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:29:185.542 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:29:185.571 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:29:190.543 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805008499,"FragmentNumber":"91343852333181501727227782925589856212093673095"}
+
+[DEBUG] [15-07-2020 09:23:29:190.641 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:29:342.170 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594804998499,"FragmentNumber":"91343852333181501722276022768448332471777517786"}
+
+[DEBUG] [15-07-2020 09:23:29:342.387 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:29:342.460 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:29:342.492 GMT] postReadCallback(): Wrote 22582 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:29:342.630 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:29:342.653 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:30:343.970 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:30:344.312 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:30:344.343 GMT] postReadCallback(): Wrote 64921 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:30:344.534 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:30:344.556 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:31:345.724 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:31:346.040 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:31:346.069 GMT] postReadCallback(): Wrote 43746 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:31:346.240 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:31:346.262 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:32:347.570 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:32:347.905 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:32:348.217 GMT] postReadCallback(): Wrote 49732 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:32:348.488 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:32:348.520 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:33:349.684 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:33:350.004 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:33:350.206 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:33:350.229 GMT] postReadCallback(): Wrote 14697 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:33:350.297 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:33:350.316 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:34:351.491 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:34:351.810 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:34:352.007 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:34:352.029 GMT] postReadCallback(): Wrote 8387 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:34:352.087 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:34:352.106 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:35:352.497 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:35:352.829 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:35:353.048 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:35:353.242 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:35:353.264 GMT] postReadCallback(): Wrote 12466 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:35:353.354 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:35:353.377 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:36:354.634 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:36:354.961 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:36:355.222 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:36:355.448 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:36:355.664 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:36:355.686 GMT] postReadCallback(): Wrote 56416 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:36:355.847 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:36:355.868 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:37:357.172 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:37:357.511 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:37:357.555 GMT] postReadCallback(): Wrote 51088 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:37:357.709 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:37:357.731 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:38:359.032 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:38:359.354 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:38:359.402 GMT] postReadCallback(): Wrote 26370 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:38:359.502 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:38:359.522 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:38:528.766 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132192338
+	>> Allocated storage byte size: 2025390
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 6963712 (6800 Kbps)
+	>> Current view duration (ms): 77
+	>> Overall view duration (ms): 9999
+	>> Current view byte size: 246503
+	>> Overall view byte size: 2015742
+	>> Current frame rate (fps): 21.3367
+	>> Current transfer rate (bps): 6963712 (6800 Kbps)
+[DEBUG] [15-07-2020 09:23:39:360.681 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:39:360.998 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:39:361.209 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:39:361.443 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:39:361.660 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:39:361.860 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:361.881 GMT] postReadCallback(): Wrote 36138 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:39:362.003 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:362.023 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:39:708.845 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805008499,"FragmentNumber":"91343852333181501727227782925589856212093673095"}
+
+[DEBUG] [15-07-2020 09:23:39:709.037 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:39:709.148 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:709.173 GMT] postReadCallback(): Wrote 42710 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:39:709.416 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:709.446 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:39:714.220 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805018498,"FragmentNumber":"91343852333181501732179543082731380136602759044"}
+
+[DEBUG] [15-07-2020 09:23:39:714.319 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:39:843.336 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805008499,"FragmentNumber":"91343852333181501727227782925589856212093673095"}
+
+[DEBUG] [15-07-2020 09:23:39:843.574 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:39:843.633 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:843.655 GMT] postReadCallback(): Wrote 23200 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:39:843.780 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:39:843.803 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:40:844.972 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:40:845.259 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:40:845.287 GMT] postReadCallback(): Wrote 20923 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:40:845.412 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:40:845.439 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:41:846.585 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:41:846.894 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:41:846.924 GMT] postReadCallback(): Wrote 4370 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:41:846.979 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:41:846.998 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:42:848.329 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:42:848.408 GMT] postReadCallback(): Wrote 61341 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:42:848.647 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:42:848.673 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:43:849.925 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:43:850.000 GMT] postReadCallback(): Wrote 58283 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:43:850.232 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:43:850.257 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:44:851.445 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:44:851.519 GMT] postReadCallback(): Wrote 61929 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:44:851.759 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:44:851.784 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:45:853.125 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:45:853.199 GMT] postReadCallback(): Wrote 59327 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:45:853.468 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:45:853.497 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:46:854.778 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:46:854.854 GMT] postReadCallback(): Wrote 56180 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:46:855.086 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:46:855.114 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:47:856.433 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:47:856.528 GMT] postReadCallback(): Wrote 53129 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:47:856.778 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:47:857.084 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:48:521.166 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 133002527
+	>> Allocated storage byte size: 1215201
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 4623736 (4515 Kbps)
+	>> Current view duration (ms): 558
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 272758
+	>> Overall view byte size: 1205553
+	>> Current frame rate (fps): 21.6799
+	>> Current transfer rate (bps): 4623736 (4515 Kbps)
+[DEBUG] [15-07-2020 09:23:48:858.300 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:48:858.618 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:48:858.836 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:48:859.038 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:48:859.244 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:48:859.435 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:48:859.457 GMT] postReadCallback(): Wrote 2397 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:48:859.503 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:48:859.522 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:49:398.090 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805018498,"FragmentNumber":"91343852333181501732179543082731380136602759044"}
+
+[DEBUG] [15-07-2020 09:23:49:398.238 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:49:398.323 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:49:398.344 GMT] postReadCallback(): Wrote 54320 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:49:398.570 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:49:398.595 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:49:402.965 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805028498,"FragmentNumber":"91343852333181501737131303239872903837176843659"}
+
+[DEBUG] [15-07-2020 09:23:49:403.036 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:49:528.382 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805018498,"FragmentNumber":"91343852333181501732179543082731380136602759044"}
+
+[DEBUG] [15-07-2020 09:23:49:528.600 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:49:528.653 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:49:528.674 GMT] postReadCallback(): Wrote 13646 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:49:528.772 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:49:528.793 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:50:530.032 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:50:530.382 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:50:530.412 GMT] postReadCallback(): Wrote 14119 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:50:530.486 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:50:530.506 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:51:531.858 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:51:532.193 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:51:532.223 GMT] postReadCallback(): Wrote 9101 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:51:532.290 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:51:532.310 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:52:532.902 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:52:533.056 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:52:533.068 GMT] postReadCallback(): Wrote 2485 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:52:533.091 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:52:533.099 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:53:534.375 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:53:534.455 GMT] postReadCallback(): Wrote 57984 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:53:534.688 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:53:534.715 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:54:536.054 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:54:536.128 GMT] postReadCallback(): Wrote 62077 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:54:536.368 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:54:536.393 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:55:537.518 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:55:537.831 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:55:537.859 GMT] postReadCallback(): Wrote 4399 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:55:537.918 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:55:537.937 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:23:56:539.244 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:56:539.319 GMT] postReadCallback(): Wrote 63184 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:56:539.582 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:56:539.608 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:57:540.936 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:57:541.266 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:57:541.295 GMT] postReadCallback(): Wrote 28696 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:57:541.445 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:57:541.473 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:58:526.470 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132927075
+	>> Allocated storage byte size: 1290653
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 3123856 (3050 Kbps)
+	>> Current view duration (ms): 917
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 343435
+	>> Overall view byte size: 1281005
+	>> Current frame rate (fps): 21.4688
+	>> Current transfer rate (bps): 3123856 (3050 Kbps)
+[DEBUG] [15-07-2020 09:23:58:541.690 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:58:542.034 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:58:542.256 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:58:542.479 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:58:542.692 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:58:542.893 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:58:542.914 GMT] postReadCallback(): Wrote 15815 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:58:542.985 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:58:543.004 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:59:427.959 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805028498,"FragmentNumber":"91343852333181501737131303239872903837176843659"}
+
+[DEBUG] [15-07-2020 09:23:59:428.057 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:59:428.137 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:23:59:428.435 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:59:428.799 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:59:428.825 GMT] postReadCallback(): Wrote 32577 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:59:428.934 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:59:428.954 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:23:59:433.746 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805038498,"FragmentNumber":"91343852333181501742083063397014427629151415109"}
+
+[DEBUG] [15-07-2020 09:23:59:433.846 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:23:59:567.906 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805028498,"FragmentNumber":"91343852333181501737131303239872903837176843659"}
+
+[DEBUG] [15-07-2020 09:23:59:568.122 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:23:59:568.178 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:59:568.197 GMT] postReadCallback(): Wrote 21774 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:23:59:568.319 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:23:59:568.340 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:00:569.639 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:00:569.957 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:00:570.161 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:00:570.186 GMT] postReadCallback(): Wrote 20551 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:00:570.274 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:00:570.293 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:01:571.498 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:01:571.822 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:01:572.115 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:01:572.324 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:01:572.535 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:01:779.039 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:02:049.450 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:02:395.121 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:02:666.390 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:02:666.469 GMT] postReadCallback(): Wrote 46224 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:02:935.236 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:02:935.310 GMT] postReadCallback(): Wrote 42229 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:03:169.525 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:169.599 GMT] postReadCallback(): Wrote 38141 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:03:396.104 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:396.129 GMT] postReadCallback(): Wrote 26862 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:03:473.782 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:473.856 GMT] postReadCallback(): Wrote 11631 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:03:474.474 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:474.545 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:03:573.889 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:573.963 GMT] postReadCallback(): Wrote 13354 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:03:574.080 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:03:574.103 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:04:575.284 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:04:575.584 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:04:575.612 GMT] postReadCallback(): Wrote 55379 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:04:575.771 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:04:575.792 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:05:576.983 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:05:577.413 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:05:577.452 GMT] postReadCallback(): Wrote 49001 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:05:577.612 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:05:577.635 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:06:578.810 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:06:579.173 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:06:579.388 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:06:579.412 GMT] postReadCallback(): Wrote 23435 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:06:579.502 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:06:579.523 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:07:580.865 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:07:581.199 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:07:581.449 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:07:581.476 GMT] postReadCallback(): Wrote 44664 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:07:581.614 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:07:581.635 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:08:519.620 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132017390
+	>> Allocated storage byte size: 2200338
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 2461912 (2404 Kbps)
+	>> Current view duration (ms): 877
+	>> Overall view duration (ms): 9999
+	>> Current view byte size: 342786
+	>> Overall view byte size: 2190690
+	>> Current frame rate (fps): 21.6266
+	>> Current transfer rate (bps): 2461912 (2404 Kbps)
+[DEBUG] [15-07-2020 09:24:08:582.941 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:08:583.274 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:08:583.491 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:08:583.697 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:08:583.902 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:08:584.100 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:08:584.122 GMT] postReadCallback(): Wrote 36478 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:08:584.238 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:08:584.258 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:09:128.999 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805038498,"FragmentNumber":"91343852333181501742083063397014427629151415109"}
+
+[DEBUG] [15-07-2020 09:24:09:129.099 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:09:129.182 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:09:129.497 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:09:129.546 GMT] postReadCallback(): Wrote 16386 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:09:129.683 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:09:129.706 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:09:134.731 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805048497,"FragmentNumber":"91343852333181501747034823554155951333010213359"}
+
+[DEBUG] [15-07-2020 09:24:09:134.821 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:09:291.933 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805038498,"FragmentNumber":"91343852333181501742083063397014427629151415109"}
+
+[DEBUG] [15-07-2020 09:24:09:292.143 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:09:292.196 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:09:292.215 GMT] postReadCallback(): Wrote 15200 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:09:292.319 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:09:292.340 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:10:293.490 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:10:293.815 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:10:293.845 GMT] postReadCallback(): Wrote 47782 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:10:293.983 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:10:294.005 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:11:295.316 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:11:295.643 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:11:295.672 GMT] postReadCallback(): Wrote 53512 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:11:295.832 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:11:295.855 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:12:296.986 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:12:297.307 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:12:297.374 GMT] postReadCallback(): Wrote 35691 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:12:297.500 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:12:297.522 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:13:297.687 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:13:298.019 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:13:298.048 GMT] postReadCallback(): Wrote 60603 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:13:298.215 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:13:298.237 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:14:299.477 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:14:299.799 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:14:300.228 GMT] postReadCallback(): Wrote 2687 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:14:300.348 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:14:300.373 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:15:301.609 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:15:301.931 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:15:301.959 GMT] postReadCallback(): Wrote 17476 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:15:302.067 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:15:302.089 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:16:303.255 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:16:303.576 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:16:303.605 GMT] postReadCallback(): Wrote 42400 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:16:303.737 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:16:303.758 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:17:305.033 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:17:305.371 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:17:305.403 GMT] postReadCallback(): Wrote 13429 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:17:305.482 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:17:305.502 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:18:306.794 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:18:307.136 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:18:307.164 GMT] postReadCallback(): Wrote 31099 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:18:307.275 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:18:307.297 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:18:520.921 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132695731
+	>> Allocated storage byte size: 1521997
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 1897040 (1852 Kbps)
+	>> Current view duration (ms): 156
+	>> Overall view duration (ms): 9999
+	>> Current view byte size: 256268
+	>> Overall view byte size: 1512349
+	>> Current frame rate (fps): 21.888
+	>> Current transfer rate (bps): 1897040 (1852 Kbps)
+[DEBUG] [15-07-2020 09:24:19:307.530 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:19:307.880 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:19:308.478 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:19:308.716 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:19:308.930 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:19:309.136 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:309.158 GMT] postReadCallback(): Wrote 34705 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:19:309.282 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:309.358 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:19:578.686 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805048497,"FragmentNumber":"91343852333181501747034823554155951333010213359"}
+
+[DEBUG] [15-07-2020 09:24:19:578.785 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:19:578.860 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:578.901 GMT] postReadCallback(): Wrote 35971 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:19:579.071 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:579.093 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:19:583.920 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805058496,"FragmentNumber":"91343852333181501751986583711297475237312035803"}
+
+[DEBUG] [15-07-2020 09:24:19:583.996 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:19:789.490 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805048497,"FragmentNumber":"91343852333181501747034823554155951333010213359"}
+
+[DEBUG] [15-07-2020 09:24:19:789.625 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:19:789.662 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:789.676 GMT] postReadCallback(): Wrote 21529 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:19:789.748 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:19:789.763 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:20:790.939 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:20:791.229 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:20:791.257 GMT] postReadCallback(): Wrote 16773 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:20:791.342 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:20:791.363 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:21:792.526 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:21:792.618 GMT] postReadCallback(): Wrote 61280 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:21:792.979 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:21:793.022 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:22:794.311 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:22:794.627 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:22:794.656 GMT] postReadCallback(): Wrote 10994 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:22:794.729 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:22:794.748 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:23:795.910 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:23:796.215 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:23:796.243 GMT] postReadCallback(): Wrote 702 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:23:796.311 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:23:796.330 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:24:797.605 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:24:797.683 GMT] postReadCallback(): Wrote 55655 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:24:797.915 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:24:797.962 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:25:799.283 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:25:799.603 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:25:799.632 GMT] postReadCallback(): Wrote 9804 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:25:799.699 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:25:799.719 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:26:801.014 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:26:801.088 GMT] postReadCallback(): Wrote 63843 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:26:801.361 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:26:801.393 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:27:802.572 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:27:802.643 GMT] postReadCallback(): Wrote 56055 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:27:802.875 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:27:802.900 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:28:516.797 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132987051
+	>> Allocated storage byte size: 1230677
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 1617984 (1580 Kbps)
+	>> Current view duration (ms): 637
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 277994
+	>> Overall view byte size: 1221029
+	>> Current frame rate (fps): 21.3002
+	>> Current transfer rate (bps): 1617984 (1580 Kbps)
+[DEBUG] [15-07-2020 09:24:28:804.268 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:28:804.740 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:28:804.978 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:28:805.200 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:28:805.457 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:28:805.484 GMT] postReadCallback(): Wrote 65204 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:28:805.657 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:28:805.677 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:29:345.170 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805058496,"FragmentNumber":"91343852333181501751986583711297475237312035803"}
+
+[DEBUG] [15-07-2020 09:24:29:345.314 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:29:345.442 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:29:345.465 GMT] postReadCallback(): Wrote 51283 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:29:345.739 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:29:345.767 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:29:350.160 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805068496,"FragmentNumber":"91343852333181501756938343868438998958810719298"}
+
+[DEBUG] [15-07-2020 09:24:29:350.251 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:29:494.193 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805058496,"FragmentNumber":"91343852333181501751986583711297475237312035803"}
+
+[DEBUG] [15-07-2020 09:24:29:494.401 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:29:494.454 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:29:494.474 GMT] postReadCallback(): Wrote 12304 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:29:494.570 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:29:494.592 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:30:495.907 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:30:496.214 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:30:496.243 GMT] postReadCallback(): Wrote 9840 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:30:496.310 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:30:496.329 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:31:497.497 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:31:497.566 GMT] postReadCallback(): Wrote 62929 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:31:497.812 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:31:497.838 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:32:499.147 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:32:499.220 GMT] postReadCallback(): Wrote 53786 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:32:499.449 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:32:499.474 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:33:500.803 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:33:500.875 GMT] postReadCallback(): Wrote 50940 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:33:501.100 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:33:501.126 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:34:502.407 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:34:502.479 GMT] postReadCallback(): Wrote 46093 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:34:502.685 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:34:502.710 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:35:504.007 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:35:504.099 GMT] postReadCallback(): Wrote 46180 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:35:504.323 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:35:504.539 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:36:505.593 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:36:505.664 GMT] postReadCallback(): Wrote 45559 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:36:505.891 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:36:505.917 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:24:37:507.201 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:37:507.274 GMT] postReadCallback(): Wrote 46410 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:37:507.482 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:37:507.507 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:38:505.853 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 133139628
+	>> Allocated storage byte size: 1078100
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 1280408 (1250 Kbps)
+	>> Current view duration (ms): 938
+	>> Overall view duration (ms): 9982
+	>> Current view byte size: 285725
+	>> Overall view byte size: 1068452
+	>> Current frame rate (fps): 21.5966
+	>> Current transfer rate (bps): 1280408 (1250 Kbps)
+[DEBUG] [15-07-2020 09:24:38:508.646 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:38:508.738 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:38:508.798 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:38:508.856 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:38:508.913 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:38:508.919 GMT] postReadCallback(): Wrote 23629 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:38:508.947 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:38:508.952 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:39:049.608 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805068496,"FragmentNumber":"91343852333181501756938343868438998958810719298"}
+
+[DEBUG] [15-07-2020 09:24:39:049.708 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:39:049.789 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:39:050.047 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:39:050.269 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:39:050.293 GMT] postReadCallback(): Wrote 43484 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:39:050.426 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:39:050.447 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:39:054.689 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805078478,"FragmentNumber":"91343852333181501761890104025580522663277667942"}
+
+[DEBUG] [15-07-2020 09:24:39:054.774 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:39:198.924 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805068496,"FragmentNumber":"91343852333181501756938343868438998958810719298"}
+
+[DEBUG] [15-07-2020 09:24:39:199.142 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:39:199.220 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:39:199.241 GMT] postReadCallback(): Wrote 28174 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:39:199.377 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:39:199.398 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:40:200.709 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:40:201.033 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:40:201.241 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:40:201.265 GMT] postReadCallback(): Wrote 60921 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:40:201.462 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:40:201.489 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:41:201.581 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:41:201.730 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:41:201.742 GMT] postReadCallback(): Wrote 51500 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:41:201.802 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:41:201.810 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:42:203.110 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:42:203.433 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:42:203.463 GMT] postReadCallback(): Wrote 39092 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:42:203.591 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:42:203.613 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:43:204.806 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:43:205.123 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:43:205.153 GMT] postReadCallback(): Wrote 16710 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:43:205.239 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:43:205.260 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:44:206.554 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:44:206.879 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:44:206.908 GMT] postReadCallback(): Wrote 36922 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:44:207.035 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:44:207.057 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:45:208.394 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:45:208.761 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:45:208.792 GMT] postReadCallback(): Wrote 39963 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:45:208.928 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:45:208.950 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:46:209.518 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:46:209.871 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:46:210.105 GMT] postReadCallback(): Wrote 24494 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:46:210.267 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:46:210.293 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:47:211.615 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:47:211.931 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:47:211.958 GMT] postReadCallback(): Wrote 13385 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:47:212.032 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:47:212.052 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:48:213.221 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:48:213.553 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:48:213.584 GMT] postReadCallback(): Wrote 33203 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:48:213.702 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:48:213.723 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:48:502.109 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132527607
+	>> Allocated storage byte size: 1690121
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 1209528 (1181 Kbps)
+	>> Current view duration (ms): 218
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 263829
+	>> Overall view byte size: 1680473
+	>> Current frame rate (fps): 21.6714
+	>> Current transfer rate (bps): 1209528 (1181 Kbps)
+[DEBUG] [15-07-2020 09:24:49:214.133 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:49:214.457 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:49:214.674 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:49:214.877 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:49:215.078 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:49:215.282 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:49:215.483 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:215.505 GMT] postReadCallback(): Wrote 9542 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:49:215.564 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:215.582 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:49:486.732 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805078478,"FragmentNumber":"91343852333181501761890104025580522663277667942"}
+
+[DEBUG] [15-07-2020 09:24:49:486.846 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:49:486.924 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:486.945 GMT] postReadCallback(): Wrote 49889 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:49:487.138 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:487.182 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:49:491.981 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805088478,"FragmentNumber":"91343852333181501766841864182722046564494348255"}
+
+[DEBUG] [15-07-2020 09:24:49:492.059 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:49:659.985 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805078478,"FragmentNumber":"91343852333181501761890104025580522663277667942"}
+
+[DEBUG] [15-07-2020 09:24:49:660.196 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:49:660.256 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:660.277 GMT] postReadCallback(): Wrote 40094 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:49:754.605 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:754.674 GMT] postReadCallback(): Wrote 12864 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:49:754.937 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:49:754.985 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:50:662.060 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:50:662.378 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:50:662.581 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:50:662.605 GMT] postReadCallback(): Wrote 29456 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:50:662.707 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:50:662.728 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:51:663.987 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:51:664.315 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:51:664.516 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:51:664.541 GMT] postReadCallback(): Wrote 8674 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:51:664.603 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:51:664.623 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:52:665.867 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:52:666.190 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:52:666.220 GMT] postReadCallback(): Wrote 41487 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:52:666.354 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:52:666.376 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:53:667.713 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:53:668.048 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:53:668.078 GMT] postReadCallback(): Wrote 19590 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:53:668.165 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:53:668.186 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:54:669.404 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:54:669.722 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:54:669.752 GMT] postReadCallback(): Wrote 29315 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:54:669.858 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:54:669.880 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:55:671.190 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:55:671.502 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:55:671.530 GMT] postReadCallback(): Wrote 1952 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:55:671.583 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:55:671.602 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:56:672.931 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:56:673.267 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:56:673.578 GMT] postReadCallback(): Wrote 41725 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:56:673.783 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:56:673.810 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:57:675.051 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:57:675.516 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:57:675.569 GMT] postReadCallback(): Wrote 44084 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:57:675.790 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:57:675.837 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:58:506.051 GMT] Kinesis Video client and stream metrics
+	>> Overall storage byte size: 134217728
+	>> Available storage byte size: 132541535
+	>> Allocated storage byte size: 1676193
+	>> Total view allocation byte size: 144080
+	>> Total streams frame rate (fps): 21
+	>> Total streams transfer rate (bps): 1398712 (1365 Kbps)
+	>> Current view duration (ms): 738
+	>> Overall view duration (ms): 10000
+	>> Current view byte size: 310785
+	>> Overall view byte size: 1666545
+	>> Current frame rate (fps): 21.752
+	>> Current transfer rate (bps): 1398712 (1365 Kbps)
+[DEBUG] [15-07-2020 09:24:58:677.030 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:58:677.419 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:58:677.676 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:58:677.889 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[DEBUG] [15-07-2020 09:24:58:678.107 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:58:678.338 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:58:678.362 GMT] postReadCallback(): Wrote 14098 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:58:678.430 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:58:678.450 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:59:218.352 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"RECEIVED","FragmentTimecode":1594805088478,"FragmentNumber":"91343852333181501766841864182722046564494348255"}
+
+[DEBUG] [15-07-2020 09:24:59:218.494 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:59:218.581 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:59:218.601 GMT] postReadCallback(): Wrote 61956 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:59:218.844 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:59:218.896 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:24:59:224.983 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"BUFFERING","FragmentTimecode":1594805098478,"FragmentNumber":"91343852333181501771793624339863570276678509971"}
+
+[DEBUG] [15-07-2020 09:24:59:225.055 GMT] fragmentAckReceivedHandler invoked
+[DEBUG] [15-07-2020 09:24:59:395.087 GMT] postWriteCallback(): Curl post body write function for stream with handle: FCA_Video_Company_1_Camera_1 and upload handle: 0 returned: {"EventType":"PERSISTED","FragmentTimecode":1594805088478,"FragmentNumber":"91343852333181501766841864182722046564494348255"}
+
+[DEBUG] [15-07-2020 09:24:59:395.301 GMT] fragmentAckReceivedHandler invoked
+[ERROR] [15-07-2020 09:24:59:395.354 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:59:395.374 GMT] postReadCallback(): Wrote 14823 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:24:59:395.478 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:24:59:395.500 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:00:396.807 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:00:397.126 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:00:397.154 GMT] postReadCallback(): Wrote 39200 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:00:397.281 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:00:397.303 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:01:397.688 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:01:398.004 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:01:398.032 GMT] postReadCallback(): Wrote 24794 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:01:398.133 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:01:398.154 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:02:399.339 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:02:399.651 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:02:399.681 GMT] postReadCallback(): Wrote 9035 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:02:399.747 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:02:399.785 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:25:03:400.843 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:03:400.877 GMT] postReadCallback(): Wrote 60053 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:03:400.953 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:03:400.958 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:04:401.493 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:04:401.876 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:04:401.909 GMT] postReadCallback(): Wrote 12282 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:04:401.981 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:04:402.001 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:05:403.142 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:05:403.509 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:05:403.545 GMT] postReadCallback(): Wrote 5887 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:05:403.622 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:05:403.644 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[DEBUG] [15-07-2020 09:25:06:404.834 GMT] postReadCallback(): Wrote 65524 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:06:405.162 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:06:405.194 GMT] postReadCallback(): Wrote 11919 bytes to Kinesis Video. Upload stream handle: 0
+[ERROR] [15-07-2020 09:25:06:405.267 GMT] getKinesisVideoStreamData(): operation returned status code: 0x5200002f
+[DEBUG] [15-07-2020 09:25:06:405.288 GMT] postReadCallback(): Pausing CURL read for upload handle: 0
+[ERROR] [15-07-2020 09:25:08:313.105 GMT] No rtsp url was read1
