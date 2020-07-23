@@ -165,7 +165,7 @@ if(MSVC)
 endif()
 
 ############# Build Targets ############
-file(GLOB PRODUCER_CPP_SOURCE_FILES "src/*.cpp" "src/common/*.cpp" "src/credential-providers/*.cpp")
+file(GLOB PRODUCER_CPP_SOURCE_FILES "src/*.cpp" "src/*.c" "src/common/*.cpp" "src/credential-providers/*.cpp")
 file(GLOB GST_PLUGIN_SOURCE_FILES "src/gstreamer/*.cpp" "src/gstreamer/Util/*.cpp")
 file(GLOB_RECURSE JNI_SOURCE_FILES "src/JNI/*.cpp")
 file(GLOB PIC_HEADERS "${KINESIS_VIDEO_PIC_SRC}/src/*/include")

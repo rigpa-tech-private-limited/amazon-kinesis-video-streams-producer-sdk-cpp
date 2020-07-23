@@ -7,6 +7,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include "sqlite3.h"
 
 using namespace std;
 using namespace com::amazonaws::kinesis::video;
@@ -181,6 +182,7 @@ typedef struct _CustomData {
     map<string, uint64_t> producer_start_time_map;
 } CustomData;
 
+
 void create_kinesis_video_frame(Frame *frame, const nanoseconds &pts, const nanoseconds &dts, FRAME_FLAGS flags,
                                 void *data, size_t len) {
     frame->flags = flags;
@@ -283,27 +285,27 @@ static void error_cb(GstBus *bus, GstMessage *msg, CustomData *data) {
 
     g_main_loop_quit(data->main_loop);
 }
-
+string accessKey;
+string secretKey;
 void kinesis_video_init(CustomData *data) {
     unique_ptr<DeviceInfoProvider> device_info_provider(new SampleDeviceInfoProvider());
     unique_ptr<ClientCallbackProvider> client_callback_provider(new SampleClientCallbackProvider());
     unique_ptr<StreamCallbackProvider> stream_callback_provider(new SampleStreamCallbackProvider());
 
-    char const *accessKey;
-    char const *secretKey;
+
     char const *sessionToken;
     char const *defaultRegion;
     string defaultRegionStr;
     string sessionTokenStr;
-    if (nullptr == (accessKey = getenv(ACCESS_KEY_ENV_VAR))) {
-        accessKey = "AKIARSH4NQ3TUOIFSKEM";
-    }
+    // if (nullptr == (accessKey = getenv(ACCESS_KEY_ENV_VAR))) {
+        // accessKey = "AKIARSH4NQ3TUOIFSKEM";
+    // }
     std::cout << "accessKey" << std::endl;
     std::cout << accessKey << std::endl;
 
-    if (nullptr == (secretKey = getenv(SECRET_KEY_ENV_VAR))) {
-        secretKey = "N+n3MPxz2tRMsA7C0/BzFe7SVjOUjP1OPr1SwJU/";
-    }
+    // if (nullptr == (secretKey = getenv(SECRET_KEY_ENV_VAR))) {
+        // secretKey = "N+n3MPxz2tRMsA7C0/BzFe7SVjOUjP1OPr1SwJU/";
+    // }
     std::cout << "secretKey" << std::endl;
     std::cout << secretKey << std::endl;
 
@@ -312,6 +314,9 @@ void kinesis_video_init(CustomData *data) {
     } else {
         sessionTokenStr = string(sessionToken);
     }
+
+    std::cout << "sessionTokenStr" << std::endl;
+    std::cout << sessionTokenStr << std::endl;
 
     if (nullptr == (defaultRegion = getenv(DEFAULT_REGION_ENV_VAR))) {
         //defaultRegionStr = DEFAULT_AWS_REGION;
@@ -387,10 +392,14 @@ static void cb_rtsp_pad_created(GstElement *element, GstPad *pad, gpointer data)
     g_free(pad_name);
 }
 
+
+std::vector<std::string> rtsp_urls;
+std::vector<std::string> kvs_names;
+
 int gstreamer_init(int argc, char *argv[]) {
     PropertyConfigurator::doConfigure("/home/rigpa/Documents/aws-kinesis/amazon-kinesis-video-streams-producer-sdk-cpp/samples/kvs_log_configuration");
 
-    if (argc < 2) {
+    if (argc < 1) {
         LOG_ERROR(
                 "Usage: AWS_ACCESS_KEY_ID=SAMPLEKEY AWS_SECRET_ACCESS_KEY=SAMPLESECRET ./kinesis_video_gstreamer_sample_multistream_app base-stream-name rtsp-url-file-name\n" <<
                 "base-stream-name: the application will create one stream for each rtsp url read. The base-stream-names will be suffixed with indexes to differentiate the streams\n" <<
@@ -416,7 +425,7 @@ int gstreamer_init(int argc, char *argv[]) {
     /* init GStreamer */
     gst_init(&argc, &argv);
 
-    ifstream rtsp_url_file (argv[1]);
+    /*ifstream rtsp_url_file (argv[1]);
     if (!rtsp_url_file.is_open()) {
         LOG_ERROR("Failed to open rtsp-urls file1");
         return 1;
@@ -445,7 +454,7 @@ int gstreamer_init(int argc, char *argv[]) {
     if (rtsp_urls.empty()) {
         LOG_ERROR("No rtsp url was read1");
         return 1;
-    }
+    }*/
 
     /* init Kinesis Video */
     //string base_stream_name(argv[1]);
@@ -537,6 +546,123 @@ CleanUp:
     return 0;
 }
 
+// Create a callback function
+int callback1(void *NotUsed, int argc, char **argv, char **azColName){
+
+    // int argc: holds the number of results
+    // (array) azColName: holds each column returned
+    // (array) argv: holds each value
+
+    for(int i = 0; i < argc; i++) {
+
+        // Show column name, value, and newline
+        // cout << i << "= " << azColName[i] << ": " << argv[i] << endl;
+        string fieldName = azColName[i];
+        string checkStrKey = "aws_key";
+
+        if(!fieldName.compare(checkStrKey)){
+            cout << azColName[i] << " :: " << argv[i] << endl;
+            accessKey = argv[i];
+        }
+
+        string checkStrSecret = "aws_secret";
+
+        if(!fieldName.compare(checkStrSecret)){
+            cout << azColName[i] << " :: " << argv[i] << endl;
+            secretKey = argv[i];
+        }
+
+    }
+
+    // Insert a newline
+    cout << endl;
+    // Return successful
+    return 0;
+}
+
+// Create a callback function
+int callback(void *NotUsed, int argc, char **argv, char **azColName){
+
+    // int argc: holds the number of results
+    // (array) azColName: holds each column returned
+    // (array) argv: holds each value
+
+    for(int i = 0; i < argc; i++) {
+
+        // Show column name, value, and newline
+        // cout << i << "= " << azColName[i] << ": " << argv[i] << endl;
+        string fieldName = azColName[i];
+        string checkStrURL = "url";
+
+        if(!fieldName.compare(checkStrURL)){
+            cout << azColName[i] << " :: " << argv[i] << endl;
+            rtsp_urls.push_back(argv[i]);
+        }
+
+        string checkStrStream = "stream_name";
+
+        if(!fieldName.compare(checkStrStream)){
+            cout << azColName[i] << " :: " << argv[i] << endl;
+            kvs_names.push_back(argv[i]);
+        }
+
+    }
+
+    // Insert a newline
+    cout << endl;
+    // Return successful
+    return 0;
+}
+
 int main(int argc, char *argv[]) {
+    // Pointer to SQLite connection
+    sqlite3 *db;
+
+    // Save any error messages
+    char *zErrMsg = 0;
+
+    // Save the result of opening the file
+    int rc;
+
+    // Save any SQL
+    string sql;
+    string sql1;
+
+    // Save the result of opening the file
+    rc = sqlite3_open("/home/rigpa/Desktop/VINOTH/facecheck_client_app/facecheckclient.sqlite", &db);
+
+    if( rc ){
+        // Show an error message
+        cout << "DB Error : " << sqlite3_errmsg(db) << endl;
+        // Close the connection
+        sqlite3_close(db);
+        // Return an error
+        return(1);
+    } else {
+      cout << "SQLite DB connection success " << endl;
+    }
+
+
+    // Save SQL insert data
+    sql = "SELECT * FROM 'cameras';";
+
+    // Run the SQL (convert the string to a C-String with c_str() )
+    rc = sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+
+
+    // Save SQL insert data
+    sql1 = "SELECT * FROM 'user';";
+
+    // Run the SQL (convert the string to a C-String with c_str() )
+    rc = sqlite3_exec(db, sql1.c_str(), callback1, 0, &zErrMsg);
+
+    // Close the SQL connection
+    sqlite3_close(db);
+
+    if (rtsp_urls.empty()) {
+        cout << "No rtsp url was read from db" << endl;
+        // Return an error
+        return(1);
+    }
     return gstreamer_init(argc, argv);
 }
