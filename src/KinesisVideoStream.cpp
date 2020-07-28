@@ -11,7 +11,7 @@ KinesisVideoStream::KinesisVideoStream(const KinesisVideoProducer& kinesis_video
           stream_name_(stream_name),
           kinesis_video_producer_(kinesis_video_producer),
           debug_dump_frame_info_(false) {
-    LOG_INFO("Creating Kinesis Video Stream " << stream_name_);
+    LOG_INFO("Creating Kinesis Video Stream1 " << stream_name_);
     // the handle is NULL to start. We will set it later once Kinesis Video PIC gives us a stream handle.
 
     if (getenv(DEBUG_DUMP_FRAME_INFO)) {

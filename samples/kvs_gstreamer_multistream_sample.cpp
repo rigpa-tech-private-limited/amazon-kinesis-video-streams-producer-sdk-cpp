@@ -8,11 +8,59 @@
 #include <vector>
 #include <map>
 #include "sqlite3.h"
+#include <ctime>
+#include <mysql/mysql.h>
 
 using namespace std;
 using namespace com::amazonaws::kinesis::video;
 using namespace log4cplus;
+MYSQL *conn, mysql;
+MYSQL_RES *res;
+MYSQL_ROW row;
 
+const char *server="localhost";
+const char *user="root";
+const char *password="facecheck";
+const char *database="facecheck_client";
+int query_state;
+
+void insert_logs_db(string message){
+  string insertQuery;
+
+  mysql_init(&mysql);
+  conn=mysql_real_connect(&mysql, server, user, password, database, 0, 0, 0);
+  if(conn==NULL)
+  {
+    cout<<mysql_error(&mysql)<<endl<<endl;
+  } else {
+    cout << "MySQL client connection success " << endl;
+  }
+  time_t rawtime;
+  struct tm * timeinfo;
+  char buffer[80];
+
+  time (&rawtime);
+  timeinfo = localtime(&rawtime);
+
+  strftime(buffer,sizeof(buffer),"%d-%m-%Y %H:%M:%S",timeinfo);
+  std::string str(buffer);
+
+  std::cout << "Date Time String " << str << std::endl;
+  // Save SQL insert data
+  insertQuery = "INSERT INTO logs (log_time, message, process_name, type) VALUES ('"+str+"','"+message+"', 'stream', 'stream')";
+  cout << "INSERT String" << insertQuery.c_str() << endl;
+
+  query_state=mysql_query(conn, insertQuery.c_str());
+  if(query_state!=0)
+  {
+    cout<<mysql_error(conn)<<endl<<endl;
+  } else {
+   cout << "MySQL client INSERT logs success" << endl;
+  }
+  cout<<endl<<endl;
+
+  mysql_close(conn);
+}
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -377,6 +425,7 @@ void kinesis_stream_init(string stream_name, CustomData *data, string stream_han
     data->frame_data_map[stream_handle_key] = new uint8_t[DEFAULT_BUFFER_SIZE];
     LOG_DEBUG("Stream is ready: " << stream_name);
     std::cout << "Stream is ready" << std::endl;
+    insert_logs_db(stream_name+" started to streaming");
 }
 
 /* callback when each RTSP stream has been created */
@@ -397,7 +446,6 @@ std::vector<std::string> rtsp_urls;
 std::vector<std::string> kvs_names;
 
 int gstreamer_init(int argc, char *argv[]) {
-    PropertyConfigurator::doConfigure("/home/rigpa/Documents/aws-kinesis/amazon-kinesis-video-streams-producer-sdk-cpp/samples/kvs_log_configuration");
 
     if (argc < 1) {
         LOG_ERROR(
@@ -546,123 +594,98 @@ CleanUp:
     return 0;
 }
 
-// Create a callback function
-int callback1(void *NotUsed, int argc, char **argv, char **azColName){
-
-    // int argc: holds the number of results
-    // (array) azColName: holds each column returned
-    // (array) argv: holds each value
-
-    for(int i = 0; i < argc; i++) {
-
-        // Show column name, value, and newline
-        // cout << i << "= " << azColName[i] << ": " << argv[i] << endl;
-        string fieldName = azColName[i];
-        string checkStrKey = "aws_key";
-
-        if(!fieldName.compare(checkStrKey)){
-            cout << azColName[i] << " :: " << argv[i] << endl;
-            accessKey = argv[i];
-        }
-
-        string checkStrSecret = "aws_secret";
-
-        if(!fieldName.compare(checkStrSecret)){
-            cout << azColName[i] << " :: " << argv[i] << endl;
-            secretKey = argv[i];
-        }
-
-    }
-
-    // Insert a newline
-    cout << endl;
-    // Return successful
-    return 0;
-}
-
-// Create a callback function
-int callback(void *NotUsed, int argc, char **argv, char **azColName){
-
-    // int argc: holds the number of results
-    // (array) azColName: holds each column returned
-    // (array) argv: holds each value
-
-    for(int i = 0; i < argc; i++) {
-
-        // Show column name, value, and newline
-        // cout << i << "= " << azColName[i] << ": " << argv[i] << endl;
-        string fieldName = azColName[i];
-        string checkStrURL = "url";
-
-        if(!fieldName.compare(checkStrURL)){
-            cout << azColName[i] << " :: " << argv[i] << endl;
-            rtsp_urls.push_back(argv[i]);
-        }
-
-        string checkStrStream = "stream_name";
-
-        if(!fieldName.compare(checkStrStream)){
-            cout << azColName[i] << " :: " << argv[i] << endl;
-            kvs_names.push_back(argv[i]);
-        }
-
-    }
-
-    // Insert a newline
-    cout << endl;
-    // Return successful
-    return 0;
-}
-
 int main(int argc, char *argv[]) {
-    // Pointer to SQLite connection
-    sqlite3 *db;
-
-    // Save any error messages
-    char *zErrMsg = 0;
-
-    // Save the result of opening the file
-    int rc;
-
-    // Save any SQL
-    string sql;
-    string sql1;
-
-    // Save the result of opening the file
-    rc = sqlite3_open("/home/rigpa/Desktop/VINOTH/facecheck_client_app/facecheckclient.sqlite", &db);
-
-    if( rc ){
-        // Show an error message
-        cout << "DB Error : " << sqlite3_errmsg(db) << endl;
-        // Close the connection
-        sqlite3_close(db);
-        // Return an error
-        return(1);
+    PropertyConfigurator::doConfigure("/home/rigpa/Documents/aws-kinesis/amazon-kinesis-video-streams-producer-sdk-cpp/samples/kvs_log_configuration");
+    printf("MySQL client version: %s\n", mysql_get_client_info());
+    mysql_init(&mysql);
+    conn=mysql_real_connect(&mysql, server, user, password, database, 0, 0, 0);
+    if(conn==NULL)
+    {
+      cout<<mysql_error(&mysql)<<endl<<endl;
+      return 1;
     } else {
-      cout << "SQLite DB connection success " << endl;
+      cout << "MySQL client connection success " << endl;
     }
+    // Fetching cameras record
+    query_state=mysql_query(conn, "select * from cameras");
+    if(query_state!=0)
+    {
+      cout<<mysql_error(conn)<<endl<<endl;
+    } else {
+     cout << "Fetching cameras record success" << endl;
+    }
+    res=mysql_store_result(conn);
 
+    while((row=mysql_fetch_row(res))!=NULL)
+    {
 
-    // Save SQL insert data
-    sql = "SELECT * FROM 'cameras';";
+     int count = sizeof(row)/sizeof(row[0]);
+     cout<<"0 => "<<row[0]<<endl
+         <<"1 => "<<row[1]<<endl
+         <<"2 => "<<row[2]<<endl
+         <<"3 => "<<row[3]<<endl
+         <<"4 => "<<row[4]<<endl
+         <<"count =>"<<(count)
+         <<endl;
+     for(int i = 0; i < (count); i++) {
+       rtsp_urls.push_back(row[2]);
+       kvs_names.push_back(row[4]);
+      }
 
-    // Run the SQL (convert the string to a C-String with c_str() )
-    rc = sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+        //rtsp_urls.push_back("rtsp://admin:123456@192.168.1.50:554");
+        //kvs_names.push_back("FCA_Video_Company_1_Camera_9");
+    }
+    cout<<endl<<endl;
 
+    // Fetching user record
+    query_state=mysql_query(conn, "select * from user");
+    if(query_state!=0)
+    {
+       cout<<mysql_error(conn)<<endl<<endl;
+    } else {
+      cout << "Fetching user record success" << endl;
+    }
+    res=mysql_store_result(conn);
 
-    // Save SQL insert data
-    sql1 = "SELECT * FROM 'user';";
+    while((row=mysql_fetch_row(res))!=NULL)
+    {
 
-    // Run the SQL (convert the string to a C-String with c_str() )
-    rc = sqlite3_exec(db, sql1.c_str(), callback1, 0, &zErrMsg);
+      int count = sizeof(row)/sizeof(row[0]);
+      cout<<"0 => "<<row[0]<<endl
+          <<"1 => "<<row[1]<<endl
+          <<"2 => "<<row[2]<<endl
+          <<"3 => "<<row[3]<<endl
+          <<"4 => "<<row[4]<<endl
+          <<"count =>"<<(count)
+          <<endl;
+          for(int i = 0; i < (count); i++) {
+            accessKey = row[4];
+            secretKey = row[5];
+          }
+    }
+    cout<<endl<<endl;
 
-    // Close the SQL connection
-    sqlite3_close(db);
+    /*mysql_query(conn, "SELECT * FROM `user`");
+    MYSQL_RES *confres = mysql_store_result(conn);
+    int totalrows = mysql_num_rows(confres);
+    int numfields = mysql_num_fields(confres);
+    MYSQL_FIELD *mfield;
 
+    while((row = mysql_fetch_row(confres)))
+    {
+        for(int i = 0; i < numfields; i++)
+        {
+            char *val = row[i];
+            LOG_DEBUG("Cameras - fields[i] url " << row[i]);
+            // do something with val...
+        }
+    }*/
+    mysql_free_result(res);
+    mysql_close(conn);
     if (rtsp_urls.empty()) {
-        cout << "No rtsp url was read from db" << endl;
-        // Return an error
-        return(1);
+       cout << "No rtsp url was read from db" << endl;
+       // Return an error
+       return(1);
     }
     return gstreamer_init(argc, argv);
 }
