@@ -311,6 +311,9 @@ static GstFlowReturn on_new_sample(GstElement *sink, CustomData *data) {
         if (false == put_frame(data->kinesis_video_stream_handles[stream_handle_key], data->frame_data_map[stream_handle_key], buffer_size, std::chrono::nanoseconds(buffer->pts),
                                std::chrono::nanoseconds(buffer->dts), kinesis_video_flags)) {
             GST_WARNING("Dropped frame");
+            LOG_DEBUG("Dropped frame");
+        } else {
+          LOG_DEBUG("No Dropped frame");
         }
     }
 
@@ -323,7 +326,7 @@ static GstFlowReturn on_new_sample(GstElement *sink, CustomData *data) {
 static void error_cb(GstBus *bus, GstMessage *msg, CustomData *data) {
     GError *err;
     gchar *debug_info;
-
+    LOG_DEBUG("error_cb" << msg << &err);
     /* Print error details on the screen */
     gst_message_parse_error(msg, &err, &debug_info);
     g_printerr("Error received from element %s: %s\n", GST_OBJECT_NAME (msg->src), err->message);
@@ -607,7 +610,7 @@ int main(int argc, char *argv[]) {
       cout << "MySQL client connection success " << endl;
     }
     // Fetching cameras record
-    query_state=mysql_query(conn, "select * from cameras");
+    query_state=mysql_query(conn, "select * from cameras where status='Running'");
     if(query_state!=0)
     {
       cout<<mysql_error(conn)<<endl<<endl;

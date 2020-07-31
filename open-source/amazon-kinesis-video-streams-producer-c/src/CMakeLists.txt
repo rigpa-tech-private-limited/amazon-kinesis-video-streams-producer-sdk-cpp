@@ -18,9 +18,9 @@ add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCE} ${SOURCE_COMMON} ${SOURC
 target_compile_definitions(${PROJECT_NAME} PRIVATE KVS_BUILD_WITH_CURL=1)
 target_link_libraries(${PROJECT_NAME} ${BP_BUILD_LIB_DIRS}
   client heap trace view mkvgen state utils curl crypto ssl jsmn)
+  
 
 install(TARGETS ${PROJECT_NAME} DESTINATION lib)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
           DESTINATION .
                 FILES_MATCHING PATTERN "Include.h")
-
